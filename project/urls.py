@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.conf.urls import include, url
 from django.contrib import admin
+from welcome import views
 
 from welcome.views import index, health
 
@@ -12,6 +13,7 @@ urlpatterns = [
     url(r'^$', index),
     url(r'^health$', health),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^test/', views.hello),
 ]
 
 if settings.DEBUG:
