@@ -26,6 +26,7 @@ def health(request):
 
 
 def hello(request):
+    
     return HttpResponse("Hello, world. Hello, Django.")
 
 
